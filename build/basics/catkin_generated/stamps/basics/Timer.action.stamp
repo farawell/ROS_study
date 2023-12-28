@@ -1,0 +1,13 @@
+# Definition of the action file.
+# Consists of goal, result, and feedback
+
+# Area 1: goal, sent from client side
+duration time_to_wait
+---
+# Area 2: result, sent by server when ended
+duration time_elapsed
+uint32 updates_sent
+---
+# Area 3: feedback, sent by server during the action
+duration time_elapsed
+duration time_remaining
