@@ -9,5 +9,5 @@ duration time_elapsed
 uint32 updates_sent
 ---
 # Area 3: feedback, sent by server during the action
-duaration time_elapsed
+duration time_elapsed
 duration time_remaining
