@@ -20,7 +20,7 @@ goal.time_to_wait = rospy.Duration.from_sec(5.0)
 # To test the halting of the client, uncomment below:
 # goal.time_to_wait = rospy.Duration.from_sec(500.0)
 
-client.send_goal(goal, feedback_cb = feedback_cb)
+client.send_goal(goal, feedback_cb = feedback_cb) # Send the goal with the callback function
 
 # To test the preempt, uncomment below:
 # time.sleep(3.0)
@@ -28,7 +28,7 @@ client.send_goal(goal, feedback_cb = feedback_cb)
 
 client.wait_for_result()
 
-print('[Result] State: %d'%client.get_state())
+print('[Result] State: %d'%client.get_state()) # ex) PREEMPTED = 2, SUCCEEDED=3, ABORTED=4, ... and 10 more
 print('[Result] Status: %s'%client.get_goal_status_text())
 print('[Result] Time elapsed %f'%client.get_result().time_elapsed.to_sec())
 print('[Result] Updates sent: %d'%client.get_result().updates_sent)
